@@ -12,6 +12,8 @@ html {
   --color-1: #9bec00;
   --color-2: #06d001;
   --color-3: #059212;
+  --color-4: #ffffff;
+  --color-5: #e84545;
   --font-main: "Zain", sans-serif;
   --font-heading: "Saira Stencil One", sans-serif;
   --font-sub: "Jersey 15", sans-serif;
@@ -57,10 +59,12 @@ header {
   display: flex;
   gap: 2rem;
   font-size: 2rem;
+  color: var(--color-3);
 }
 
 .social-handle {
   text-decoration: none;
+  color: var(--color-3);
 }
 
 .main-body {
@@ -74,10 +78,15 @@ header {
 
 .prompt-title {
   padding-bottom: 4rem;
-  font-size: 4rem;
+  font-size: 3.4rem;
   text-align: center;
   font-family: "Zain", sans-serif;
   font-weight: 100;
+}
+
+.prompt-title-text span {
+  font-family: var(--font-sub);
+  font-size: 5rem;
 }
 
 .nationality-form {
@@ -89,18 +98,38 @@ header {
 #name-input {
   height: 3rem;
   padding: 2rem;
+  font-family: var(--font-main);
+  font-size: 2rem;
+  font-weight: 400;
   border: 1px solid #949494;
   box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 
 #submit-search-btn {
-  height: 3.5rem;
+  height: 3.9rem;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: var(--color-2);
+  border-radius: 1rem;
+  font-family: var(--font-main);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-4);
 }
 
 .fa-magnifying-glass {
   padding-right: 0.5rem;
+}
+
+.search-information {
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-family: var(--font-sub);
+}
+
+.search-information .no-name {
+  color: var(--color-5);
 }
