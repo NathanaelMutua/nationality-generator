@@ -23,6 +23,11 @@ body {
   height: 100%;
 }
 
+body::selection{
+  background-color: var(--color-2);
+  color: var(--color-4);
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -102,6 +107,7 @@ header {
   font-size: 2rem;
   font-weight: 400;
   border: 1px solid #949494;
+  border-radius: .5rem;
   box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 
@@ -113,7 +119,8 @@ header {
   align-items: center;
   border: none;
   background-color: var(--color-2);
-  border-radius: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
   font-family: var(--font-main);
   font-size: 1.9rem;
   font-weight: 700;
@@ -132,4 +139,17 @@ header {
 
 .search-information .no-name {
   color: var(--color-5);
+}
+
+.found-result{
+  font-family: var(--font-main);
+}
+
+.found-result .name{
+  text-transform: capitalize;
+}
+
+.found-result span{
+  font-weight: 800;
+  color: var(--color-3);
 }

@@ -16,16 +16,27 @@ function findMostProbableCountry(object){
 }
 
 submitSearchBtn.addEventListener("click", async (e) => {
+  searchInformation.innerHTML = `<p>....</p>`
   let searchName = nameInput.value;
   if (searchName === "") {
     searchInformation.innerHTML = `<span class="no-name">Please Enter A Name</span>`;
     return;
   }
+  submitSearchBtn.innerHTML = `<p>Loading...</p>`
+  submitSearchBtn.setAttribute("disabled", true)
 
-  const response = await fetch(
+  try{
+    const response = await fetch(
     `https://api.nationalize.io/?name=${searchName}`,
   );
   const outputData = await response.json();
+
+  // my custom error message if a name is actually not found
+  if (outputData.count === 0){
+    searchInformation.innerHTML = `<span class="no-name">Unfortunately, ${outputData.name} is not yet identified😥</span>`;
+  }
+  console.log(outputData.count)
+
   const {name, country} = outputData;
 
   const probableCountry = findMostProbableCountry(country);
@@ -36,5 +47,13 @@ submitSearchBtn.addEventListener("click", async (e) => {
   let probableCountryName = new Intl.DisplayNames(['en'], {type: 'region'});
   const countryName = probableCountryName.of(probableCountryValue);  // gives the full name
 
-  searchInformation.innerHTML = `<span class="found-result">${name} is from ${countryName} with ${countryProbability}% certainty</span>`
+  searchInformation.innerHTML = `<span class="found-result"><span class="name">${name}</span> is from <span>${countryName}</span> with <span>${countryProbability}%</span> certainty</span>`
+  } catch(e){
+    searchInformation.innerHTML = `<span class="no-name">Yoo, something went wrong, please try again later😊</span>`;
+  } finally{
+    submitSearchBtn.removeAttribute("disabled")
+    submitSearchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i><p class="button-text">Search</p>`
+  }
+
+  
 });
