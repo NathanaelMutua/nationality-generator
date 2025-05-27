@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --color-1:#9BEC00;
+    --color-2:#06D001;
+    --color-3: #059212;
+    --font-main:"Zain", sans-serif;
+    --font-heading:"Saira Stencil One", sans-serif;
+    --font-sub: "Jersey 15", sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    padding: .5rem .5rem;
+    background-color: var(--color-3);
+    border-radius: 50%;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    padding: .5rem;
+}
+
+.site-name-text{
+    font-size: 2.3rem;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.socials-list{
+    list-style-type: none;
+    /* text-decoration: none; */
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.social-handle{
+    text-decoration: none;
+}
+
+.main-body{
+    height: 70vh;
+    margin: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-title{
+    padding-bottom: 4rem;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Zain", sans-serif;
+    font-weight: 100;
+}
+
+.nationality-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#name-input{
+    height: 3rem;
+    padding: 2rem;
+    border: 1px solid #949494;
+    box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+
+#submit-search-btn{
+    height: 3.5rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-magnifying-glass{
+    padding-right: .5rem;
+}
