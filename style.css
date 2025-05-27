@@ -50,7 +50,6 @@ header {
 .logo img {
   height: 100%;
   width: 100%;
-  padding: 0.5rem;
 }
 
 .site-name-text {
@@ -60,14 +59,13 @@ header {
 
 .socials-list {
   list-style-type: none;
-  /* text-decoration: none; */
   display: flex;
   gap: 2rem;
   font-size: 2rem;
   color: var(--color-3);
 }
 
-.social-handle {
+.social-handle-link{
   text-decoration: none;
   color: var(--color-3);
 }
