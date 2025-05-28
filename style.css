@@ -17,13 +17,14 @@ html {
   --font-main: "Zain", sans-serif;
   --font-heading: "Saira Stencil One", sans-serif;
   --font-sub: "Jersey 15", sans-serif;
+  --box-shadow-1: rgba(0, 0, 0, 0.3);
 }
 
 body {
   height: 100%;
 }
 
-body::selection{
+body::selection {
   background-color: var(--color-2);
   color: var(--color-4);
 }
@@ -65,14 +66,15 @@ header {
   color: var(--color-3);
 }
 
-.social-handle-link{
+.social-handle-link {
   text-decoration: none;
   color: var(--color-3);
 }
 
 .main-body {
-  height: 70vh;
-  margin: 5rem 2rem;
+  height: 60vh;
+  margin-block: 5rem 0;
+  margin-inline: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +107,7 @@ header {
   font-size: 2rem;
   font-weight: 400;
   border: 1px solid #949494;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 
@@ -117,12 +119,18 @@ header {
   align-items: center;
   border: none;
   background-color: var(--color-2);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
   font-family: var(--font-main);
   font-size: 1.9rem;
   font-weight: 700;
   color: var(--color-4);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+#submit-search-btn:hover {
+  background-color: var(--color-3);
 }
 
 .fa-magnifying-glass {
@@ -133,21 +141,106 @@ header {
   padding-top: 2rem;
   font-size: 3rem;
   font-family: var(--font-sub);
+  text-align: center;
 }
 
 .search-information .no-name {
   color: var(--color-5);
 }
 
-.found-result{
-  font-family: var(--font-main);
-}
-
-.found-result .name{
+.name-unidentified span {
+  color: var(--color-2);
   text-transform: capitalize;
 }
 
-.found-result span{
+.found-result {
+  font-family: var(--font-main);
+}
+
+.found-result .name {
+  text-transform: capitalize;
+}
+
+.found-result span {
   font-weight: 800;
   color: var(--color-3);
 }
+
+.footer-section {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1.4rem;
+  filter: opacity(0.2);
+}
+
+.logos-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.disclaimer {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+/* Start of media queries */
+@media screen and (max-width: 37.8125em) {
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .site-name-text {
+    font-size: 2rem;
+  }
+
+  .socials-list {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .prompt-title-text {
+    line-height: 3rem;
+    font-size: 3.4rem;
+  }
+
+  .prompt-title-text span {
+    font-size: 4rem;
+  }
+
+  .disclaimer {
+    font-size: 1.4rem;
+  }
+
+  .footer-section {
+    font-size: 1rem;
+  }
+
+  #submit-search-btn {
+    height: 2.9rem;
+    font-size: 1.4rem;
+  }
+
+  #name-input {
+    height: 2.5rem;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .search-information {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and(max-width: 25.625em) {
+}
+/* End of media queries */

@@ -1,7 +1,11 @@
+![Home Screen](./public/find-nationality-home-screen.png)
+
 # NATIONALITY GENERATOR
+
 Discover origins and embrace diversity with every name.
 
-Built with the tools and technologies:
+Built with these tools and technologies:
+
 - HTML
 - CSS
 - JavaScript
@@ -13,8 +17,12 @@ Built with the tools and technologies:
 ---
 
 ## Table of Contents
+
 - [Overview](#overview)
-- [Getting Started](#getting-started
+- [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+- [Expected Output](#expected-output)
 
 ## Overview
 
@@ -27,13 +35,15 @@ The tool predicts an individual's nationality solely on their name, its accuracy
 ### Prerequisites
 
 This project requires the following dependencies:
-- Package manager: Node.js
+
+- Package manager: [Node.js](https://nodejs.org/en/download)
   > Download this from your browser
--Programming languages: HTML, CSS and JavaScript
+  > -Programming languages: HTML, CSS and JavaScript
 
 ### Installation
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/NathanaelMutua/nationality-generator.git
    ```
@@ -42,3 +52,12 @@ This project requires the following dependencies:
    ```bash
    npm run dev
    ```
+
+## Expected Output
+
+1. When you run an unidentified name:
+   ![Unidentified name output](./public/find-nationality-unidentified-name.png)
+
+2. When you search for an empty string:
+   ![Searched Empty String](./public/find-nationality-empty-search.png)
+
