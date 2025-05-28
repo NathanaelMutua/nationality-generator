@@ -61,3 +61,5 @@ This project requires the following dependencies:
 2. When you search for an empty string:
    ![Searched Empty String](./public/find-nationality-empty-search.png)
 
+3. When the fetch is unable - (Tested using throttling offline)
+   ![Unable to fetch](./public/find-nationality-error.png)
